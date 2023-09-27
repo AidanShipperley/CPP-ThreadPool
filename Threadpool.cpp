@@ -53,7 +53,6 @@ void ThreadPool::start() {
     for (uint32_t i = 0; i < m_numThreads; i++) {
         threads.at(i) = std::thread(&ThreadPool::ThreadLoop, this);
     }
-    std::cout << "made " << threads.size() << " threads in pool" << std::endl;
 }
 
 
